@@ -18,7 +18,7 @@ export class AuthenticationService {
         return this.apiService.get(this.authEndPoint)
             .then(res => {
                 if (res) {
-                    localStorage.setItem('auth_token', res.auth_token);
+                    localStorage.setItem('auth_token', res.token);
                     return res;
                 }
             }).catch(err => err);
